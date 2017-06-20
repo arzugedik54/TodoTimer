@@ -1,0 +1,121 @@
+li .glyphicon {
+    margin-right: 10px;
+}
+
+/* Highlighting rules for nav menu items */
+li.link-active a,
+li.link-active a:hover,
+li.link-active a:focus {
+    background-color: #4189C7;
+    color: white;
+}
+
+/* Keep the nav menu independent of scrolling and on top of other items */
+.main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+@media (min-width: 768px) {
+    /* On small screens, convert the nav menu to a vertical sidebar */
+    .main-nav {
+        height: 100%;
+        width: calc(25% - 20px);
+    }
+    .navbar {
+        border-radius: 0px;
+        border-width: 0px;
+        height: 100%;
+    }
+    .navbar-header {
+        float: none;
+    }
+    .navbar-collapse {
+        border-top: 1px solid #444;
+        padding: 0px;
+    }
+    .navbar ul {
+        float: none;
+    }
+    .navbar li {
+        float: none;
+        font-size: 15px;
+        margin: 6px;
+    }
+    .navbar li a {
+        padding: 10px 16px;
+        border-radius: 4px;
+    }
+    .navbar a {
+        /* If a menu item's text is too long, truncate it */
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+.avatar, .avatar .avatar-image {
+    height: 28px;
+    width: 28px;
+}
+
+.avatar {
+    border-radius: 50%;
+    background: #ededed;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: box;
+    display: flex;
+    -webkit-box-align: center;
+    -o-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -o-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.userToolbar-name {
+    margin: 0 8px;
+    font-size: 15px;
+}
+
+.userToolbar-syncStatus {
+    margin: 0 8px;
+    color: #767678;
+    font-size: 11px;
+    height: 0;
+    overflow: hidden;
+    transition: height .2s 1s;
+}
+
+.icon svg {
+    fill: #767678;
+}
+
+.avatar .avatar-default, .avatar svg {
+    width: 19.599999999999998px;
+    height: 19.599999999999998px;
+}
+
+.userToolbar {
+    padding: 0 4px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: box;
+    display: flex;
+    -webkit-box-align: center;
+    -o-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+    -webkit-box-flex: 1;
+    -o-box-flex: 1;
+    box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}

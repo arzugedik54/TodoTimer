@@ -1,0 +1,33 @@
+﻿<div class='main-nav'>
+    <div class='navbar'>
+        <div class='navbar-header'>
+            <button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'>
+                <span class='sr-only'>Toggle navigation</span>
+                <span class='icon-bar'></span>
+                <span class='icon-bar'></span>
+                <span class='icon-bar'></span>
+            </button>
+            <a class='navbar-brand userToolbar' [routerLink]="['/home']"><div class="userToolbar-avatar"><div class="avatar"><i class="icon user avatar-default"><svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill-rule="evenodd"><g><path d="M21.0000402,21.5016276 C21.0020798,20.8750498 20.9354932,20.250133 20.8014713,19.638053 C20.5280255,18.3616279 19.6415794,17.3001183 18.4322762,16.8026027 C16.3004075,16.1934029 14.1429902,15.9289966 11.9835486,16.0002721 C9.85709548,15.9289966 7.69967817,16.1934029 5.62135916,16.7840451 C4.35850625,17.3001183 3.47206009,18.3616279 3.19813622,19.6402606 C3.06459242,20.250133 2.99800584,20.8750498 3.00004547,21.5016276 C3.00094436,21.7777685 3.22552949,22.0008962 3.5016704,21.9999974 C3.77781132,21.9990985 4.00093906,21.7745133 4.00004017,21.4983724 C3.99823821,20.9448053 4.05706592,20.3927057 4.17547125,19.851947 C4.38082266,18.893424 5.04381377,18.0994993 5.94827621,17.7273973 C7.8734853,17.1836069 9.92755328,16.9318667 11.9835486,16.9997279 C14.0725324,16.9318667 16.1266003,17.1836069 18.1053592,17.7459549 C18.9562719,18.0994993 19.619263,18.893424 19.8241362,19.8497394 C19.9430197,20.3927057 20.0018474,20.9448053 20.0000455,21.4983724 C19.9991466,21.7745133 20.2222743,21.9990985 20.4984152,21.9999974 C20.7745561,22.0008962 20.9991413,21.7777685 21.0000402,21.5016276 Z" id="Shape"></path><path d="M12.0000428,2 C8.68982301,2 7.05929034,4.0037344 7.00013143,7.14558701 C6.93046516,11.0495134 8.9562693,15 12.0000428,15 C15.0438163,15 17.0696205,11.0495134 16.9999632,7.14607886 C16.9407953,4.0037344 15.3102626,2 12.0000428,2 Z M12.0000428,14 C9.69131036,14 7.93895367,10.5827587 7.99996323,7.16392114 C8.04966072,4.52456501 9.29027078,3 12.0000428,3 C14.7098149,3 15.9504249,4.52456501 16.0001314,7.16441299 C16.061132,10.5827587 14.3087753,14 12.0000428,14 Z" id="Shape"></path></g></g></svg></i></div></div> <div class="userToolbar-name">Murat Demirci</div><div class="userToolbar-syncStatus">Eşitlenemiyor</div></a>
+        </div>
+        <div class='clearfix'></div>
+        <div class='navbar-collapse collapse'>
+            <ul class='nav navbar-nav'>
+                <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/home']">
+                        <span class='glyphicon glyphicon-time'></span> Günüm
+                    </a>
+                </li>
+                <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/counter']">
+                        <span class='glyphicon glyphicon-home'></span> Yapılacaklar
+                    </a>
+                </li>
+                <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/fetch-data']">
+                        <span class='glyphicon glyphicon-th-list'></span> Ecoms İşleri
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
