@@ -2,10 +2,63 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:TodoTimer"
-             x:Class="TodoTimer.MainPage">
-
-	<Label Text="Welcome to Xamarin Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
-
+             x:Class="TodoTimer.MainPage" BackgroundColor="DeepSkyBlue" Title="TodoTimer">
+    
+    <RelativeLayout>
+        <ContentView x:Name="blueBox" BackgroundColor="Blue"
+                 RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+            Property=Height,Factor=0,Constant=0}"
+                     RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
+                 RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=.15}">
+            <RelativeLayout>
+                <Image Source="background.png" Aspect="AspectFill"
+                RelativeLayout.WidthConstraint=
+                  "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+                RelativeLayout.HeightConstraint=
+                  "{ConstraintExpression Type=RelativeToParent, Property=Height}"/>
+                <StackLayout Orientation="Horizontal" RelativeLayout.WidthConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+            RelativeLayout.HeightConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Height}">
+                    <Button Image="menu.png" Margin="5" BorderWidth="0" BorderRadius="0" BorderColor="Transparent" HorizontalOptions="Start" BackgroundColor="Transparent" />
+                    <Label Text="Günüm" Margin="5"
+         HorizontalOptions="StartAndExpand" FontSize="30" TextColor="White"/>
+                    <Button Image="lightbulb.png" BorderWidth="0" BorderRadius="0" BorderColor="Transparent" Margin="5" HorizontalOptions="End" BackgroundColor="Transparent" />
+                </StackLayout>
+            </RelativeLayout>
+        </ContentView>
+        <ContentView BackgroundColor="WhiteSmoke"
+          RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,
+            ElementName=blueBox,Property=Height,Factor=1}"
+          RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
+          RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=.85}">
+            <ListView
+            x:Name="listView"
+            BackgroundColor="White">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Margin="0,0,0,0" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                <Button Image="check2.png" BackgroundColor="Transparent"          
+          BorderWidth="0"
+          BorderColor="Transparent"
+          BorderRadius="0" HorizontalOptions="Start" Clicked="CheckButton_Clicked" />
+                                <Label Text="{Binding Name}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </ContentView>
+        <Button
+          x:Name="btnAdd"
+          Image="plus.png"
+          BackgroundColor="Transparent"
+          Scale="0.5"
+          BorderWidth="0"
+          BorderColor="Transparent"
+          BorderRadius="0"
+          RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1, Constant=-100}"
+          RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=-120}" />
+    </RelativeLayout>
 </ContentPage>
